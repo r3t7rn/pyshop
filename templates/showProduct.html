@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+
+{% block content %}
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>r3t7rn的0day交易市场</h1>
+      <p class="lead text-muted">查看漏洞详细信息</p>
+      <p>
+        <a href="/cart" class="btn btn-primary my-2">查看购物车</a>
+        <a href="/" class="btn btn-primary my-2">返回商城</a>
+    </div>
+  </section>
+ <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="alert alert-success">今日上架新品”Ripple20“漏洞库。</div>
+        <ul class="list-group">
+          <li class="list-group-item active">{{ product.pname }}</li>
+          <li class="list-group-item">{{ product.pdescribe }}</li>
+          <li class="list-group-item">品牌：{{ product.brand }}</li>
+          <li class="list-group-item">类型：{{ product.pclass }}</li>
+          <li class="list-group-item">价格：￥{{ product.price }}</li>
+          <li class="list-group-item">库存：{{ product.stock }}</li>
+        </ul>
+        <br>
+        <form action="/additem/" method="post" class="form-inline mb-2" role="form">
+            {% csrf_token %}
+            <div class="form-group mx-sm-3 mb-2">
+                <label class="sr-only" for="name">数量</label>
+                <input type="text" class="form-control" name="quantity"
+                       placeholder="请输入购买数量">
+                <input name="id" type="hidden" value="{{ product_id }}">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">加入购物车</button>
+        </form>
+        {{ message }}
+	</div>
+</div>
+{% endblock %}

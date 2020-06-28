@@ -1,0 +1,80 @@
+{% extends "index.html" %}
+
+{% block content %}
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>r3t7rn的0day交易市场</h1>
+      <p class="lead text-muted">查看购物车详细信息</p>
+      <p>
+        <a href="/" class="btn btn-primary my-2">返回商城</a>
+    </div>
+  </section>
+ <div class="album py-5 bg-light">
+    <div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+            <h1>您的购物车</h1>
+			<table class="table table-hover">
+				<thead>
+					<tr class="table-primary">
+						<th>
+							编号
+						</th>
+						<th>
+							产品名称
+						</th>
+						<th>
+							产品数量
+						</th>
+                        <th>
+							产品单价
+						</th>
+						<th>
+							产品总价
+						</th>
+                        <th>
+							操作
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+                {% for item in cart %}
+					<tr>
+						<td>
+							{{ item.id }}
+						</td>
+						<td>
+							{{ item.product.pname }}
+						</td>
+						<td>
+							{{ item.quantity }}
+						</td>
+                        <td>
+							￥{{ item.unit_price }}
+						</td>
+                        <td>
+							￥{{ item.total_price }}
+						</td>
+						<td>
+							<a href="/removeitem/?id={{ item.object_id }}" type="button" class="btn btn-danger">删除</a>
+						</td>
+					</tr>
+                    {% endfor %}
+                    <tr class="table-info">
+						<td>
+							Totally
+						</td>
+						<td>
+							￥{{ cart.summary }}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+            <h1>{{ message }}</h1>
+            <a href="/checkout" type="button" class="btn btn-primary btn-block">结算</a>
+		</div>
+	</div>
+</div>
+  </div>
+ </div>
+{% endblock %}
