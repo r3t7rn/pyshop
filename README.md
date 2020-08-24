@@ -35,13 +35,13 @@ python manage.py runserver
 
 商城设计架构
 
-![img](README.assets/clip_image002.jpg)
+![img](http://r3t7rn.cxynb.cn/r3t7rn/20200824195701.jpg)
 
 Django流程
 
 
 
-   ![image](README.assets/clip_image003.png)
+   ![image](http://r3t7rn.cxynb.cn/r3t7rn/20200824195704.png)
 
 
 
@@ -49,7 +49,7 @@ Django流程
 
 
 
-![img](README.assets/clip_image005.jpg)
+![img](http://r3t7rn.cxynb.cn/r3t7rn/20200824195700.jpg)
 
 
 
@@ -57,15 +57,15 @@ Django流程
 
 **商城主界面**
 
-![img](README.assets/clip_image002-1594181206221.jpg)
+![img](http://r3t7rn.cxynb.cn/r3t7rn/20200824195708.jpg)
 
 **查看商品详细界面**
 
-![img](README.assets/clip_image004.jpg)
+![img](http://r3t7rn.cxynb.cn/r3t7rn/20200824195712.jpg)
 
 **查看购物车并结算**
 
-![img](README.assets/clip_image006.jpg)
+![img](http://r3t7rn.cxynb.cn/r3t7rn/20200824195714.jpg)
 
 ## 使用许可
 
